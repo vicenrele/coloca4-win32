@@ -1,9 +1,3 @@
-/*************************************************************************************************
-*	Víctor Enrique Elena Redondo.											DNI: 07978966J       *
-*                                                                                                *
-*   Práctica Windows: coloca4											Interfaces Gráficas		 *
-**************************************************************************************************/
-
 
 #include <windows.h>
 #include <stdio.h>
@@ -12,11 +6,11 @@
 #include "resource.h"
 
 LRESULT CALLBACK WndProc (HWND, UINT, WPARAM, LPARAM);  //Procedimiento de ventana 
-BOOL CALLBACK DlgProc(	//Procedimiento de diálogo
-    HWND,   // manipulador del cuadro de diálogo
+BOOL CALLBACK DlgProc(	//Procedimiento de diï¿½logo
+    HWND,   // manipulador del cuadro de diï¿½logo
     UINT,   // mensaje
-    WPARAM, // primer parámetro del mensaje
-    LPARAM  // segundo parámetro del mensaje
+    WPARAM, // primer parï¿½metro del mensaje
+    LPARAM  // segundo parï¿½metro del mensaje
    );
 
 int ganador(int );
@@ -39,7 +33,7 @@ struct _config {
 
 int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR szCmdLine, int iCmdShow)
 {
-	//definición de los parámetros de la ventana Juego
+	//definiciï¿½n de los parï¿½metros de la ventana Juego
 	static char szAppName[] = "Juego" ;
 	HWND        hwnd ;
 	MSG         msg ;
@@ -62,18 +56,18 @@ int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR szCmdLine
 
 	//creacion de la ventana
 	hwnd = CreateWindow (szAppName,		// Nombre clase de ventana
-					"Coloca 4",  // Barra del t¡tulo
+					"Coloca 4",  // Barra del tï¿½tulo
 					WS_OVERLAPPEDWINDOW, // Estilo de ventana
-					CW_USEDEFAULT,       // Posici¢n x inicial
-					CW_USEDEFAULT,       // Posici¢n y inicial
-					CW_USEDEFAULT,       // TamaÏo x inicial
-					CW_USEDEFAULT,       // TamaÏo y inicial
+					CW_USEDEFAULT,       // Posiciï¿½n x inicial
+					CW_USEDEFAULT,       // Posiciï¿½n y inicial
+					CW_USEDEFAULT,       // Tamaï¿½o x inicial
+					CW_USEDEFAULT,       // Tamaï¿½o y inicial
 					NULL,                // Handle de ventana padre
-					NULL,                // Handle a menú de ventana
+					NULL,                // Handle a menï¿½ de ventana
 					hInstance,           // Handle de instancia
-					NULL) ;              // Parámetros de creación
+					NULL) ;              // Parï¿½metros de creaciï¿½n
 	
-	//Variables de necesaria inicialización al principio
+	//Variables de necesaria inicializaciï¿½n al principio
 	config.actual=IDC_ROJAS_BLANCAS;
 	config.elegirColor=1; //Empieza eligiendo color (scroll) el jugador 1
 	config.primera_partida=0;  //La primera partida tiene los colores por defecto
@@ -111,13 +105,13 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 	 {
 
 		  case WM_CLOSE:
-				msg = MessageBox (hwnd, "¿Desea cerrar coloca 4?   ", "Salir", MB_ICONWARNING | MB_OKCANCEL);
+				msg = MessageBox (hwnd, "ï¿½Desea cerrar coloca 4?   ", "Salir", MB_ICONWARNING | MB_OKCANCEL);
 				if(msg != IDCANCEL){
 					break;
 				}
 			  return 0;
 
-		  case WM_CREATE: //La ventana lo recibe después de ser creada pero antes de ser visible
+		  case WM_CREATE: //La ventana lo recibe despuï¿½s de ser creada pero antes de ser visible
 			  
 			  if(!config.primera_partida){  //Colores por defecto
 				config.colorFondo=RGB(255, 255, 255);  //Blanco
@@ -129,13 +123,13 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 			  
 					for(i=0;i<7;i++){
 						for(j=0;j<7;j++){
-							juego.tablero[i][j]=0; //Posición vacía del tablero
+							juego.tablero[i][j]=0; //Posiciï¿½n vacï¿½a del tablero
 							
 						}
 					}
 
 					for(j=0;j<7;j++){
-							juego.tablero[6][j]=6; //Posición válida del tablero
+							juego.tablero[6][j]=6; //Posiciï¿½n vï¿½lida del tablero
 							
 					}
 
@@ -143,18 +137,18 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 					juego.salir=0;
 				return 0;
 
-		  case WM_PAINT:	//se recibe cuando se recibe una petición para pintar
+		  case WM_PAINT:	//se recibe cuando se recibe una peticiï¿½n para pintar
 				hdc = BeginPaint (hwnd, &ps);
 				GetClientRect (hwnd, &rect);
 
-				ancho = (rect.right-rect.left)/9;   //División de la ventana en rectángulos 
+				ancho = (rect.right-rect.left)/9;   //Divisiï¿½n de la ventana en rectï¿½ngulos 
 				alto = (rect.bottom-rect.top)/9;
 
-				for(i=1;i<8;i++){  //Solo para los rectángulos del centro
+				for(i=1;i<8;i++){  //Solo para los rectï¿½ngulos del centro
 					for(j=1;j<8;j++){
 						hbrush = CreateSolidBrush (RGB(0,0,255)); //Fondo azul
 						SelectObject(hdc, hbrush);						  
-						// 8 y 2 para las separaciones entre rectángulos.
+						// 8 y 2 para las separaciones entre rectï¿½ngulos.
 						Rectangle (hdc,  (j*ancho)+8, (i*alto)+2,(j+1)*ancho, (i+1)*alto); //( ,Xizq, Yarrib, Xdcha, Yabaj)
 						DeleteObject (hbrush);
 
@@ -205,10 +199,10 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 							{
 								if(juego.jugador==1){	//jugador 1
 									juego.tablero[i-1][j-1]=1;									
-									if((i-2)>=0){juego.tablero[i-2][j-1]=6;} //Marca lugar válido "6" pero nunca fuera de la matriz
-									InvalidateRect (hwnd,NULL,0);  //Invalida la región (NULL:toda) del rect hasta que se vuelva a repintar cuando windows envie WM_PAINT
+									if((i-2)>=0){juego.tablero[i-2][j-1]=6;} //Marca lugar vï¿½lido "6" pero nunca fuera de la matriz
+									InvalidateRect (hwnd,NULL,0);  //Invalida la regiï¿½n (NULL:toda) del rect hasta que se vuelva a repintar cuando windows envie WM_PAINT
 									if(ganador(juego.jugador)==TRUE){
-										sprintf(mens, "Gana Jugador 1 (Premio: En configuración puede crear un color para sus fichas)  ");
+										sprintf(mens, "Gana Jugador 1 (Premio: En configuraciï¿½n puede crear un color para sus fichas)  ");
 										MessageBox (hwnd, mens, "Enhorabuena!!", MB_ICONWARNING | MB_OK);
 										config.elegirColor=1;
 										config.primera_partida=1;
@@ -222,10 +216,10 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 									if((i-2)>=0){juego.tablero[i-2][j-1]=6;}
 									InvalidateRect (hwnd,NULL,0);
 									if(ganador(juego.jugador)==TRUE){
-										sprintf(mens, "Gana Jugador 2 (Premio: En configuración puede crear un color para sus fichas)  ");
+										sprintf(mens, "Gana Jugador 2 (Premio: En configuraciï¿½n puede crear un color para sus fichas)  ");
 										MessageBox (hwnd, mens, "Enhorabuena!!", MB_ICONWARNING | MB_OK);
 										config.elegirColor=2;
-										config.primera_partida=1;  //A partir de aquí no es primera partida. No se reinician los colores.
+										config.primera_partida=1;  //A partir de aquï¿½ no es primera partida. No se reinician los colores.
 										juego.salir=1;
 									}
 									juego.jugador=1;
@@ -247,7 +241,7 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 						return 0;
 
 					case ID_AYUDA_INTRUCCIONES:
-						MessageBox (hwnd, "El jugador que antes haga una línea de 4 gana. Las fichas se colocan de abajo a arriba.   ",
+						MessageBox (hwnd, "El jugador que antes haga una lï¿½nea de 4 gana. Las fichas se colocan de abajo a arriba.   ",
 									"Instrucciones", MB_ICONEXCLAMATION |MB_OK);
 						return 0;
 
@@ -278,7 +272,7 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 int ganador(int jugador){
 	int i, j;
 
-	//comprobación de las filas y columnas
+	//comprobaciï¿½n de las filas y columnas
 	for(i=0;i<7;i++){
 		for(j=0;j<7;j++){
 			if(juego.tablero[i][j]==jugador && juego.tablero[i][j+1]==jugador 
@@ -292,7 +286,7 @@ int ganador(int jugador){
 			}
 		}
 	}
-	//comprobación de las diagonales	
+	//comprobaciï¿½n de las diagonales	
 	for(i=0;i<7;i++){
 		for(j=0;j<7;j++){
 			if(juego.tablero[i][j]==jugador && juego.tablero[i+1][j+1]==jugador 
@@ -322,7 +316,7 @@ BOOL CALLBACK DlgProc (HWND hdlg, UINT iMsg, WPARAM wParam, LPARAM lParam)
 		case WM_INITDIALOG:
 			configDLG = config;
 			CheckRadioButton (hdlg, IDC_ROJAS_BLANCAS, 
-								IDC_NEGRAS_AMARILLAS,config.actual); //último param indica la combinación de fichas en curso
+								IDC_NEGRAS_AMARILLAS,config.actual); //ï¿½ltimo param indica la combinaciï¿½n de fichas en curso
 			
 			if(config.elegirColor==1){ //El jugador 1 puede crear un color
 				color[0] = GetRValue(configDLG.colorP1);
@@ -354,7 +348,7 @@ BOOL CALLBACK DlgProc (HWND hdlg, UINT iMsg, WPARAM wParam, LPARAM lParam)
 
 			switch (configDLG.fondo) {
 				case WHITE_BRUSH : 
-					//Tercer parámetro especifica info adicional al mensaje (distinción de color)
+					//Tercer parï¿½metro especifica info adicional al mensaje (distinciï¿½n de color)
 					SendMessage (hwnd_dlg, CB_SETCURSEL, (WPARAM) 0, 0);
 					break;
 
