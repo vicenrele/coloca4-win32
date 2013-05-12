@@ -1,0 +1,36 @@
+﻿Compilación iniciada a las 17/05/2012 21:04:30.
+     1>Proyecto "E:\Mis documentos\INFORMÁTICA\ASIGNATURAS EN CURSO\Interfaces Gráficas\Prácticas entregar\coloca4\WIN\coloca4\JuegoWin\JuegoWin.vcxproj" en el nodo 2 (build destinos).
+     1>InitializeBuildStatus:
+         Se creará "Debug\JuegoWin.unsuccessfulbuild" porque se especificó "AlwaysCreate".
+       ClCompile:
+         C:\Archivos de programa\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>e:\mis documentos\informática\asignaturas en curso\interfaces gráficas\prácticas entregar\coloca4\win\coloca4\juegowin\main.cpp(211): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\archivos de programa\microsoft visual studio 10.0\vc\include\stdio.h(371) : vea la declaración de 'sprintf'
+     1>e:\mis documentos\informática\asignaturas en curso\interfaces gráficas\prácticas entregar\coloca4\win\coloca4\juegowin\main.cpp(225): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\archivos de programa\microsoft visual studio 10.0\vc\include\stdio.h(371) : vea la declaración de 'sprintf'
+     1>e:\mis documentos\informática\asignaturas en curso\interfaces gráficas\prácticas entregar\coloca4\win\coloca4\juegowin\main.cpp(100): warning C4101: 'rectaux' : variable local sin referencia
+     1>e:\mis documentos\informática\asignaturas en curso\interfaces gráficas\prácticas entregar\coloca4\win\coloca4\juegowin\main.cpp(99): warning C4101: 'pt' : variable local sin referencia
+     1>e:\mis documentos\informática\asignaturas en curso\interfaces gráficas\prácticas entregar\coloca4\win\coloca4\juegowin\main.cpp(102): warning C4101: 'hpen' : variable local sin referencia
+       ResourceCompile:
+         Todas las salidas están actualizadas.
+       ManifestResourceCompile:
+         Todas las salidas están actualizadas.
+       Link:
+         C:\Archivos de programa\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Mis documentos\INFORMÁTICA\ASIGNATURAS EN CURSO\Interfaces Gráficas\Prácticas entregar\coloca4\WIN\coloca4\Debug\JuegoWin.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\JuegoWin.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Mis documentos\INFORMÁTICA\ASIGNATURAS EN CURSO\Interfaces Gráficas\Prácticas entregar\coloca4\WIN\coloca4\Debug\JuegoWin.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Mis documentos\INFORMÁTICA\ASIGNATURAS EN CURSO\Interfaces Gráficas\Prácticas entregar\coloca4\WIN\coloca4\Debug\JuegoWin.lib" /MACHINE:X86 Debug\JuegoWin.res
+         Debug\JuegoWin.exe.embed.manifest.res
+         Debug\main.obj
+       Manifest:
+         C:\Archivos de programa\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\JuegoWin.exe.embed.manifest" /manifest Debug\JuegoWin.exe.intermediate.manifest
+         Todas las salidas están actualizadas.
+       LinkEmbedManifest:
+         Todas las salidas están actualizadas.
+         JuegoWin.vcxproj -> E:\Mis documentos\INFORMÁTICA\ASIGNATURAS EN CURSO\Interfaces Gráficas\Prácticas entregar\coloca4\WIN\coloca4\Debug\JuegoWin.exe
+       FinalizeBuildStatus:
+         Se eliminará el archivo "Debug\JuegoWin.unsuccessfulbuild".
+         Aplicando tarea Touch a "Debug\JuegoWin.lastbuildstate".
+     1>Compilación del proyecto terminada "E:\Mis documentos\INFORMÁTICA\ASIGNATURAS EN CURSO\Interfaces Gráficas\Prácticas entregar\coloca4\WIN\coloca4\JuegoWin\JuegoWin.vcxproj" (build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:04.70
